@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(189, 159, 159);
+    color: #fff;
+    height: 680px;
+}
+
+.container {
+    width: 1460px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.content {
+    // width: 50%;
+    max-width: 680px;
+}
+
+.title {
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.search {
+    margin-bottom: 20px;
+}
+
+.popular {
+    display: flex;
+    align-items: center;
+
+    &__title {
+        font-weight: 600;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .popular {
+        display: none;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+}
