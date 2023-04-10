@@ -1,0 +1,24 @@
+.nav {
+    padding: 5px 0;
+    margin-bottom: 20px;
+    // background-color: rgb(57, 57, 57);
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.link {
+    color: #000;
+}
+
+.slash {
+    color: gray;
+}
+
+.categoryIcon {
+    width: 16px;
+    height: 16px;
+}

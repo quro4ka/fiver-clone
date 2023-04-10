@@ -1,0 +1,32 @@
+.btn {
+    // display: block;
+    width: 100%;
+    // width: 100px;
+    // max-width: 100px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    border-right: 1px solid rgb(210, 210, 210);
+    outline: none;
+    transition: all .3s ease;
+
+    &:last-child {
+        border-right: 0px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &_active {
+        // border-bottom: 1px solid green;
+        background-color: rgb(213, 244, 213);
+    }
+}
+
+@media screen and (max-width: 490px) {
+
+}

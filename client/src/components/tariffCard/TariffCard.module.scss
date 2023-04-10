@@ -1,0 +1,37 @@
+.card {
+    width: 100%;
+    
+    // position: fixed;
+    // top: 25%;
+    // right: 0;
+    // width: 450px;
+    // height: 500px;
+    border: 1px solid rgb(210, 210, 210);;
+}
+
+.wrapper {
+    padding: 30px 20px; 
+}
+
+.tabs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tariff {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 900px) {
+    // .card {
+    //     position: fixed;
+    //     top: 20%;
+    //     right: 50px;
+    //     width: 420px;
+    // }
+}

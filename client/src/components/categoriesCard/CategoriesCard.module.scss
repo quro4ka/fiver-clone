@@ -1,0 +1,17 @@
+@import './../../flexAdaptive.scss';
+
+.cards {
+    // $cards: 4;
+    // $gap: 40;
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+    flex-wrap: wrap;
+    gap: $gap;
+}
+
+// @media screen and (max-width: 730px) {
+//     .cards {
+//         justify-content: center;
+//     }
+// }
