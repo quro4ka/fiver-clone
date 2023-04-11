@@ -3,6 +3,7 @@ import { Catalog } from '../../components/ui/Catalog/Catalog'
 import { AiFillStar } from 'react-icons/ai'
 import styles from './FullCategory.module.scss'
 import { TariffCard } from '../../components/tariffCard/TariffCard'
+import { ThumbsCard } from '../../components/thumbsCard/ThumbsCard'
 
 export const FullCategory = () => {
   const [countStars, setCountStars] = useState(5)
@@ -38,12 +39,9 @@ export const FullCategory = () => {
                 </div>
               </div>
             </div>
-            <h1>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero cum vero
-              voluptatum. A labore quia accusamus velit, vitae excepturi voluptates nobis
-              dignissimos delectus! Doloribus, tempora, voluptatum odit hic fugit magnam quas
-              repellendus porro, laborum eos suscipit culpa nostrum praesentium doloremque deleniti
-            </h1>
+            <div className={styles.gallery}>
+              <ThumbsCard />
+            </div>
           </div>
           <TariffCard />
         </div>

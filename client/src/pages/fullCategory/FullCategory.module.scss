@@ -1,9 +1,9 @@
 .wrapper {
     display: flex;
     align-items: start;
-    
+    justify-content: space-between;
     &__inner {
-        // width: 100%;
+        width: 50%
     }
 }
 
@@ -50,9 +50,17 @@
     gap: 10px;
 }
 
+.gallery {
+    margin-bottom: 60px;
+}
+
 @media screen and (max-width: 900px) {
     .wrapper {
         flex-direction: column;
+
+        &__inner {
+            width: 100%;
+        }
     }
 }
 

@@ -2,7 +2,7 @@ import './App.css'
 import './SwiperCustom.css'
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 import { Home } from './pages/home/Home'
-import { Categories } from './pages/categories/Categories'
+import { Gigs } from './pages/gigs/Gigs'
 import { Navbar } from './components/navbar/Navbar'
 import { Footer } from './components/footer/Footer'
 import { FormRegister } from './components/formRegister/FormRegister'
@@ -31,11 +31,11 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/categories',
-        element: <Categories />,
+        path: '/gigs',
+        element: <Gigs />,
       },
       {
-        path: '/category/:id',
+        path: '/gig/:id',
         element: <FullCategory />,
       },
     ],

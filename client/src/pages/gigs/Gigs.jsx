@@ -2,10 +2,10 @@ import { Sort } from '../../components/ui/Sort/Sort'
 import { Link } from 'react-router-dom'
 import { CategoriesCard } from '../../components/categoriesCard/CategoriesCard'
 
-import styles from './Categories.module.scss'
+import styles from './Gigs.module.scss'
 import { Catalog } from '../../components/ui/Catalog/Catalog'
 
-export const Categories = () => {
+export const Gigs = () => {
   return (
     <section className={styles.wrapper}>
       <div className="container">

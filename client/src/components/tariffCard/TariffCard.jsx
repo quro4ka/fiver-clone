@@ -31,7 +31,7 @@ const tariffs = [
 ]
 
 export const TariffCard = () => {
-  const [activePlan, setActivePlan] = useState(1)
+  const [activePlan, setActivePlan] = useState(0)
 
   return (
     <div className={styles.card}>

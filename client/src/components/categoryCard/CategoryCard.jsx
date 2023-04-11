@@ -6,7 +6,7 @@ import styles from './CategoryCard.module.scss'
 export const CategoryCard = () => {
   return (
     <div className={styles.card}>
-      <Link to="/category/1">
+      <Link to="/gig/1">
         <img
           className={styles.card__img}
           src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/298455330/original/71894dfd3e509a10b445aeca0b3db60d38f2e7e6/create-amazing-fictional-ai-art-portraits-character-design.jpg"

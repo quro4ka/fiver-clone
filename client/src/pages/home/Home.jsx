@@ -3,6 +3,7 @@ import { Header } from '../../components/header/Header'
 import { Cards } from '../../components/cards/Cards'
 import { SellingProposition } from '../../components/sellingProposition/SellingProposition'
 import { TechCards } from '../../components/techCards/TechCards'
+import { ThumbsCard } from '../../components/thumbsCard/ThumbsCard'
 
 export const Home = () => {
   return (
@@ -16,6 +17,7 @@ export const Home = () => {
         card="project"
         slidesPerView={4}
       />
+      {/* <ThumbsCard /> */}
     </div>
   )
 }

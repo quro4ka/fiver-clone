@@ -33,11 +33,11 @@ export const Cards = ({ slidesPerView, title = '', card }) => {
             navigation={true}
             modules={[Navigation]}
             breakpoints={breakpoints}
-            className="mySwiper"
+            // className="mySwiper"
           >
             {[1, 1, 1, 1, 1, 1, 1, 1, 1].map((cardData, index) => (
               <SwiperSlide key={index}>
-                <Link to="/categories?cat=design">{getCard(cardData)}</Link>
+                <Link to="/gigs?cat=design">{getCard(cardData)}</Link>
               </SwiperSlide>
             ))}
           </Swiper>
