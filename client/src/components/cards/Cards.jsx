@@ -33,7 +33,6 @@ export const Cards = ({ slidesPerView, title = '', card }) => {
             navigation={true}
             modules={[Navigation]}
             breakpoints={breakpoints}
-            // className="mySwiper"
           >
             {[1, 1, 1, 1, 1, 1, 1, 1, 1].map((cardData, index) => (
               <SwiperSlide key={index}>

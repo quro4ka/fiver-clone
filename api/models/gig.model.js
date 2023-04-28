@@ -12,7 +12,7 @@ const gigSchema = new Schema(
       type: String,
       required: true,
     },
-    description: {
+    desc: {
       type: String,
       required: true,
     },
@@ -20,11 +20,11 @@ const gigSchema = new Schema(
       type: Number,
       default: 0,
     },
-    starNumber: {
+    stars: {
       type: Number,
       default: 0,
     },
-    category: {
+    cat: {
       type: String,
       required: true,
     },

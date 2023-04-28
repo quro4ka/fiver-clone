@@ -4,16 +4,15 @@ import { BsCheck2 } from 'react-icons/bs'
 import { IoIosArrowUp } from 'react-icons/io'
 import styles from './Sort.module.scss'
 
-const options = ['Recommended', 'Best Selling', 'Newest Arrivals']
-
-export const Sort = () => {
+export const Sort = ({ options, setSort }) => {
   const [active, setActive] = useState(0)
   const [isOpen, setIsOpen] = useState(false)
 
   const sortRef = useRef(null)
 
-  const onOption = (index) => {
+  const onOption = (index, option) => {
     setActive(index)
+    setSort(option)
     setIsOpen(false)
   }
 
@@ -46,7 +45,7 @@ export const Sort = () => {
 
       <div className={isOpen ? cn(styles.options, styles.options_active) : cn(styles.options)}>
         {options.map((option, index) => (
-          <div onClick={() => onOption(index)} className={styles.option}>
+          <div key={index} onClick={() => onOption(index, option)} className={styles.option}>
             <div className={active === index ? styles.option__icon : styles.checkHidden}>
               <BsCheck2 />
             </div>

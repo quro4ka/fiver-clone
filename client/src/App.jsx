@@ -8,41 +8,52 @@ import { Footer } from './components/footer/Footer'
 import { FormRegister } from './components/formRegister/FormRegister'
 import { FormAuth } from './components/formAuth/FormAuth'
 import { FullCategory } from './pages/fullCategory/FullCategory'
-
-const Layout = () => {
-  return (
-    <>
-      <FormRegister />
-      <FormAuth />
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </>
-  )
-}
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: '/gigs',
-        element: <Gigs />,
-      },
-      {
-        path: '/gig/:id',
-        element: <FullCategory />,
-      },
-    ],
-  },
-])
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 
 function App() {
+  const queryClient = new QueryClient()
+
+  const Layout = () => {
+    return (
+      <>
+        <QueryClientProvider client={queryClient}>
+          <FormRegister />
+          <FormAuth />
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </QueryClientProvider>
+      </>
+    )
+  }
+
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+        },
+        {
+          path: '/gigs',
+          element: <Gigs />,
+        },
+        {
+          path: '/gig/:id',
+          element: <FullCategory />,
+        },
+      ],
+    },
+  ])
+
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>

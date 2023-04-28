@@ -5,9 +5,7 @@
     bottom: 0;
     right: 0;
     z-index: 10;
-    // height: 10000px;
     background-color: #2d2d2de0;
-    
 }
 
 .navbar {
@@ -142,6 +140,19 @@
             
         }
     }
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.userIcon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 920px) {
