@@ -7,7 +7,8 @@ import { Navbar } from './components/navbar/Navbar'
 import { Footer } from './components/footer/Footer'
 import { FormRegister } from './components/formRegister/FormRegister'
 import { FormAuth } from './components/formAuth/FormAuth'
-import { FullCategory } from './pages/fullCategory/FullCategory'
+import { Gig } from './pages/gig/Gig'
+
 import {
   useQuery,
   useMutation,
@@ -48,7 +49,7 @@ function App() {
         },
         {
           path: '/gig/:id',
-          element: <FullCategory />,
+          element: <Gig />,
         },
       ],
     },

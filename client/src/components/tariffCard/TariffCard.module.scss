@@ -1,37 +1,38 @@
 .card {
     width: 100%;
-    max-width: 490px;
-    // position: fixed;
-    // top: 25%;
-    // right: 0;
-    // width: 450px;
-    // height: 500px;
-    border: 1px solid rgb(210, 210, 210);;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid rgb(228, 228, 228);
 }
 
-.wrapper {
-    padding: 30px 20px; 
-}
-
-.tabs {
-    width: 100%;
+.header {
     display: flex;
-    align-items: center;
-    // flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.tariff {
+.desc {
+    margin-bottom: 20px;
+}
+
+.order {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-@media screen and (min-width: 900px) {
-    // .card {
-    //     position: fixed;
-    //     top: 20%;
-    //     right: 50px;
-    //     width: 420px;
-    // }
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 850px) {
+    .card {
+        width: 100%;
+        max-width: none;
+    }
 }

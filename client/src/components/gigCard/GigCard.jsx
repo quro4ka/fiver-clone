@@ -15,7 +15,7 @@ export const GigCard = ({ card }) => {
 
   return (
     <div className={styles.card}>
-      <Link to="/gig/1">
+      <Link to={`/gig/${card._id}`}>
         <img className={styles.card__img} src={card?.cover} alt="card img" />
       </Link>
       <div className={styles.wrapper}>

@@ -2,8 +2,10 @@
     display: flex;
     align-items: start;
     justify-content: space-between;
+    // gap: 100px;
     &__inner {
-        width: 50%
+        width: 100%;
+        max-width: 700px;
     }
 }
 
@@ -54,7 +56,16 @@
     margin-bottom: 60px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1190px) {
+    .wrapper {
+
+        &__inner {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
     .wrapper {
         flex-direction: column;
 
@@ -63,6 +74,13 @@
         }
     }
 }
+
+@media screen and (max-width: 790px) {
+    .wrapper {
+        // flex-direction: column;
+    }
+}
+
 
 @media screen and (max-width: 490px) {
     .author {
