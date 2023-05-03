@@ -1,10 +1,11 @@
 import cn from 'classnames'
-import { useEffect, useRef, useState } from 'react'
+import { Children, useEffect, useRef, useState } from 'react'
 import { BsCheck2 } from 'react-icons/bs'
 import { IoIosArrowUp } from 'react-icons/io'
+import { AiFillStar } from 'react-icons/ai'
 import styles from './Sort.module.scss'
 
-export const Sort = ({ options, setSort }) => {
+export const Sort = ({ title = 'Select', options = [], setValue, children }) => {
   const [active, setActive] = useState(0)
   const [isOpen, setIsOpen] = useState(false)
 
@@ -12,7 +13,7 @@ export const Sort = ({ options, setSort }) => {
 
   const onOption = (index, option) => {
     setActive(index)
-    setSort(option)
+    setValue(option)
     setIsOpen(false)
   }
 
@@ -37,7 +38,8 @@ export const Sort = ({ options, setSort }) => {
   return (
     <div ref={sortRef} className={styles.sort}>
       <div onClick={handleOptions} className={styles.sort__title}>
-        Sort by <span>{options[active]}</span>
+        {title} <span>{options[active]}</span>
+        {children}
         <IoIosArrowUp
           className={isOpen ? cn(styles.arrowIcon, styles.arrowIcon_open) : styles.arrowIcon}
         />

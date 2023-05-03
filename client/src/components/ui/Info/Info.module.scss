@@ -1,0 +1,11 @@
+.card {
+    // margin-bottom: 20px;
+    &__title {
+        color: #404145;
+        margin-bottom: 10px;
+    }
+
+    &__desc {
+        color: #62646a;
+    }
+}

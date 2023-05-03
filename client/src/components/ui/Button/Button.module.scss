@@ -32,3 +32,16 @@
         background-color: #26a86b;   
     }
 }
+
+.gray {
+    color: #000;
+    background-color: transparent;
+    border: 1px solid rgb(155, 155, 155);
+    border-radius: 5px;
+    transition: all .3s ease;
+
+    &:hover {
+        color: #fff;
+        background-color: rgb(155, 155, 155);   
+    }
+}

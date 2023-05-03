@@ -1,0 +1,34 @@
+.card {
+
+    &__title {
+        margin-bottom: 20px;
+    }
+}
+
+.seller {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &__block {
+        width: 100px;
+        height: 100px;
+        
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        &_stars {
+            color: rgb(238, 208, 38);
+        }
+    }
+
+}

@@ -17,7 +17,7 @@ const reviewSchema = new Schema(
       required: true,
       enum: [1, 2, 3, 4, 5],
     },
-    description: {
+    desc: {
       type: String,
       required: true,
     },
@@ -27,4 +27,4 @@ const reviewSchema = new Schema(
   },
 )
 
-export default mongoose.model('review', reviewSchema)
+export default mongoose.model('Review', reviewSchema)

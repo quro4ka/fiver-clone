@@ -1,0 +1,62 @@
+.card {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    img {
+        border-radius: 50%;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+    }
+}
+
+.country {
+
+    &__title {
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+}
+
+.rate {
+
+}
+
+.stars {
+    color: rgb(227, 208, 98);
+}
+
+
+@media screen and (max-width: 1150px) {
+    .card {
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .card {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .card {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .card {
+        max-width: none;
+    }
+}

@@ -17,26 +17,23 @@
 }
 
 .options {
+    z-index: -1;
     position: absolute;
     top: 30px;
-    right: -350px;
-    opacity: 0;
-    // visibility: hidden;
-    // display: none;
-    padding: 10px;
-    border-radius: 5px;
-    // width: 100%;
     width: 255px;
+    right: 0;
+    opacity: 0;
+    padding: 10px;
+    border-radius: 5px;    
     background-color: #ffffff;
     border: 1px solid gray;
-    transition: all .3s ease;
+    // transition: z-index, opacity, position, .3s ease;
+    transition: all .6s ease;
 
     &_active {
+        z-index: 1;
         opacity: 1;
         right: 0;
-        // translate: transformx(350px);
-        // display: block;
-        // visibility: visible;
     }
 }
 

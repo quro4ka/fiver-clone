@@ -1,16 +1,20 @@
 import { useState } from 'react'
 import { Catalog } from '../../components/ui/Catalog/Catalog'
 import { AiFillStar } from 'react-icons/ai'
-import styles from './Gig.module.scss'
 import { TariffCard } from '../../components/tariffCard/TariffCard'
 import { ThumbsCard } from '../../components/thumbsCard/ThumbsCard'
 import { useQuery } from '@tanstack/react-query'
 import { newRequest } from '../../utils/newRequest'
 import { useParams } from 'react-router-dom'
+import { SellerCard } from '../../components/sellerCard/SellerCard'
+import { Info } from '../../components/ui/Info/Info'
+import { Reviews } from '../../components/reviews/Reviews'
+import { FormReview } from '../../components/formReview/FormReview'
+import styles from './Gig.module.scss'
 
 export const Gig = () => {
   const [countStars, setCountStars] = useState(5)
-  const starsArray = [...new Array(6)]
+  const starsArray = [...new Array(5)]
 
   const { id } = useParams()
 
@@ -26,7 +30,7 @@ export const Gig = () => {
   } = useQuery({
     queryKey: ['user'],
     queryFn: () => newRequest.get(`/users/${data.userId}`).then((res) => res.data),
-    enabled: !!data?.userId,
+    enabled: !!data,
   })
 
   return (
@@ -77,6 +81,10 @@ export const Gig = () => {
                 <div className={styles.gallery}>
                   <ThumbsCard images={data?.images} />
                 </div>
+                <Info title="Gig 1" style={{ marginBottom: 20 }}>
+                  dsakmdkadm
+                </Info>
+                <SellerCard style={{ marginBottom: 20 }} />
               </>
             )}
           </div>
@@ -84,6 +92,10 @@ export const Gig = () => {
             <TariffCard />
           </div>
         </div>
+        <div className={styles.reviews}>
+          <Reviews gigId={id} />
+        </div>
+        <div className={styles.wrapper__inner}></div>
       </div>
     </div>
   )

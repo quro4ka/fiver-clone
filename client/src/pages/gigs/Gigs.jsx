@@ -24,9 +24,6 @@ export const Gigs = () => {
     refetch()
   }, [sort])
 
-  // console.log(data)
-  // console.log(sort)
-
   return (
     <section className={styles.wrapper}>
       <div className="container">
@@ -41,7 +38,7 @@ export const Gigs = () => {
               {isLoading ? '...' : data?.length} services available
             </span>
             <div>
-              <Sort options={options} setSort={setSort} />
+              <Sort title="Sort by" options={options} setValue={setSort} />
             </div>
           </div>
           {isLoading ? (
