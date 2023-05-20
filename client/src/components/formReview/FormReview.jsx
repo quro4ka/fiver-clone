@@ -28,7 +28,7 @@ export const FormReview = ({ gigId }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log({ gigId, desc, stars })
+    // console.log({ gigId, desc, stars })
     if (desc.length < 3) {
       return setError(true)
     }
@@ -37,7 +37,7 @@ export const FormReview = ({ gigId }) => {
     setError(false)
   }
 
-  console.log(stars)
+  // console.log(stars)
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>

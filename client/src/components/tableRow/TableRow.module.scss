@@ -1,0 +1,16 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    padding: 20px;
+    word-wrap: break-word;
+
+    &__img, &__title, &__price, &__buyer, &__message{
+        width: 100px;
+        
+    }
+
+    &:nth-child(odd) {
+        background-color: rgb(249, 242, 234);
+    }
+}

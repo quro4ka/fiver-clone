@@ -16,6 +16,9 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import { Orders } from './pages/orders/Orders'
+import { Messages } from './pages/messages/Messages'
+import { Message } from './pages/message/Message'
 
 function App() {
   const queryClient = new QueryClient()
@@ -50,6 +53,18 @@ function App() {
         {
           path: '/gig/:id',
           element: <Gig />,
+        },
+        {
+          path: '/orders',
+          element: <Orders />,
+        },
+        {
+          path: '/messages',
+          element: <Messages />,
+        },
+        {
+          path: '/message/:id',
+          element: <Message />,
         },
       ],
     },

@@ -1,0 +1,39 @@
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    // align-items: center;
+    gap: 10px;
+}
+
+.input {
+    // display: inline-block;
+    width: 100%;
+    padding: 8px;
+
+    border: 1px solid rgb(193, 215, 193);
+    border-radius: 5px;
+
+    &:focus {
+        outline: none !important;
+        border: 1px solid rgb(162, 189, 162);
+    }
+}
+
+.textarea {
+    resize: none;
+    width: 80%;
+    overflow: auto;
+    // padding: 10px 20px;
+    // font-size: 18px;
+    // height: 40px;
+    // min-height: 20px;
+    // height: 100%;
+    border: 1px solid rgb(193, 215, 193);
+    border-radius: 5px;
+
+    &:focus {
+        outline: none !important;
+        border: 2px solid rgb(162, 189, 162);
+    }
+}

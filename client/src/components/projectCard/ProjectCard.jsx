@@ -1,6 +1,8 @@
 import styles from './ProjectCard.module.scss'
 
-export const ProjectCard = () => {
+export const ProjectCard = ({ data }) => {
+  console.log(data)
+
   return (
     <div className={styles.card}>
       <img

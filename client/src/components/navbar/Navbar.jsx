@@ -1,20 +1,18 @@
 import { useEffect, useState } from 'react'
 import { Button } from '../ui/Button/Button'
 import cn from 'classnames'
-import styles from './Navbar.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { useLocation, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { setModalAuth, setModalRegister } from '../../redux/modalSlice'
 import { setPopup } from '../../redux/popupSlice'
-
 import { AiOutlineUser } from 'react-icons/ai'
 import { Popup } from '../ui/Popup/Popup'
+import styles from './Navbar.module.scss'
 
 export const Navbar = () => {
   const [isAuth, setIsAuth] = useState(false)
   const [isScroll, setIsScroll] = useState(false)
   const [burgerIsOpen, setIsBurgerOpen] = useState(false)
-  // const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('currentUser')))
   const currentUser = JSON.parse(localStorage.getItem('currentUser'))
   const { isOpenPopup } = useSelector((state) => state.popup)
 
@@ -69,7 +67,9 @@ export const Navbar = () => {
               <span className={styles.burger__stick_middle}></span>
               <span className={styles.burger__stick_bottom}></span>
             </div>
-            <h2 className={styles.logo}>fiverr</h2>
+            <Link to="/">
+              <h2 className={styles.logo}>fiverr</h2>
+            </Link>
             <div className={styles.dot}></div>
           </div>
           <div className={styles.right}>
@@ -82,7 +82,11 @@ export const Navbar = () => {
             <div className={styles.btns}>
               {currentUser ? (
                 <div onClick={() => dispatch(setPopup(true))} className={styles.user}>
-                  {currentUser.img || <AiOutlineUser className={styles.userIcon} />}
+                  {currentUser.img ? (
+                    <img className={styles.user__img} src={currentUser.img} />
+                  ) : (
+                    <AiOutlineUser className={styles.userIcon} />
+                  )}
                   <p>{currentUser?.username}</p>
                 </div>
               ) : (

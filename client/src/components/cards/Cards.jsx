@@ -9,8 +9,12 @@ import { Link } from 'react-router-dom'
 import { TechCard } from '../techCard/TechCard'
 import { ProjectCard } from '../projectCard/ProjectCard'
 
-export const Cards = ({ slidesPerView, title = '', card }) => {
+export const Cards = ({ slidesPerView, title = '', card, data }) => {
+  console.log('data', data)
+
   const getCard = (cardData) => {
+    console.log('carddata', cardData)
+
     if (card === 'popular') {
       return <PopularCard data={cardData} />
     }
@@ -34,7 +38,7 @@ export const Cards = ({ slidesPerView, title = '', card }) => {
             modules={[Navigation]}
             breakpoints={breakpoints}
           >
-            {[1, 1, 1, 1, 1, 1, 1, 1, 1].map((cardData, index) => (
+            {data?.map((cardData, index) => (
               <SwiperSlide key={index}>
                 <Link to="/gigs?cat=design">{getCard(cardData)}</Link>
               </SwiperSlide>

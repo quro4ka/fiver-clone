@@ -25,7 +25,7 @@ export const ThumbsCard = ({ images }) => {
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2"
+        className="thumbs2"
       >
         {images?.map((image, index) => (
           <SwiperSlide key={index}>
@@ -41,7 +41,7 @@ export const ThumbsCard = ({ images }) => {
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper"
+        className="thumbs"
       >
         {images?.map((image, index) => (
           <SwiperSlide key={index}>

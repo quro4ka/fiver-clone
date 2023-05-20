@@ -6,9 +6,9 @@ import { setPopup } from '../../../redux/popupSlice'
 import { CiLogout } from 'react-icons/ci'
 import { AiOutlineUser } from 'react-icons/ai'
 
-import styles from './Popup.module.scss'
 import { newRequest } from '../../../utils/newRequest'
 import { Link, useNavigate } from 'react-router-dom'
+import styles from './Popup.module.scss'
 
 export const Popup = () => {
   const { isOpenPopup } = useSelector((state) => state.popup)
@@ -44,18 +44,30 @@ export const Popup = () => {
 
   return (
     <div ref={popupRef} className={styles.popup}>
-      <div className={styles.item}>
+      <Link to="/" className={styles.item}>
         <div className={styles.item__icon}>
           <AiOutlineUser className={styles.userIcon} />
         </div>
         <p className={styles.item__text}>Profile</p>
-      </div>
-      <div className={styles.item} onClick={handleLogout}>
+      </Link>
+      <Link to="/orders" className={styles.item}>
+        <div className={styles.item__icon}>
+          <AiOutlineUser className={styles.userIcon} />
+        </div>
+        <p className={styles.item__text}>Orders</p>
+      </Link>
+      <Link to="/messages" className={styles.item}>
+        <div className={styles.item__icon}>
+          <AiOutlineUser className={styles.userIcon} />
+        </div>
+        <p className={styles.item__text}>Messages</p>
+      </Link>
+      <Link to="/" className={styles.item} onClick={handleLogout}>
         <div className={styles.item__icon}>
           <CiLogout />
         </div>
         <p className={styles.item__text}>Log out</p>
-      </div>
+      </Link>
     </div>
   )
 }

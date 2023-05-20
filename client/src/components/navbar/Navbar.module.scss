@@ -147,6 +147,13 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
+
+    &__img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
 }
 
 .userIcon {

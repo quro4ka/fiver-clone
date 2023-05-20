@@ -47,17 +47,19 @@ export const FormAuth = () => {
             <h2 className={styles.form__title}>Auth</h2>
             <div className={styles.inputs}>
               <Input
-                style={{ marginBottom: 10 }}
+                style={{ marginBottom: 20 }}
                 placeholder="login"
+                label="Login"
                 onChange={(e) => setUsername(e.target.value)}
               />
               <Input
-                style={{ marginBottom: 10 }}
+                style={{ marginBottom: 20 }}
                 placeholder="password"
+                label="Password"
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <Button width={'100%'} green>
+            <Button style={{ width: '100%' }} green>
               Auth
             </Button>
             {error && error}

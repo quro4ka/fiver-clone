@@ -1,0 +1,30 @@
+.card {
+    padding-top: 120px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(229, 254, 242);
+}
+
+.item {
+    color: #000;
+    text-overflow: ellipsis;
+    overflow-x: hidden;    
+    width: 100px;
+    padding: 15px 5px;
+}
+
+@media (max-width: 767px) {
+    // .table{
+    //     display: block;
+    //     width: 100%;
+    // }
+}
