@@ -19,6 +19,8 @@ import {
 import { Orders } from './pages/orders/Orders'
 import { Messages } from './pages/messages/Messages'
 import { Message } from './pages/message/Message'
+import { MyGigs } from './pages/myGigs/MyGigs'
+import { AddGig } from './pages/addGig/AddGig'
 
 function App() {
   const queryClient = new QueryClient()
@@ -65,6 +67,14 @@ function App() {
         {
           path: '/message/:id',
           element: <Message />,
+        },
+        {
+          path: '/mygigs',
+          element: <MyGigs />,
+        },
+        {
+          path: '/add',
+          element: <AddGig />,
         },
       ],
     },

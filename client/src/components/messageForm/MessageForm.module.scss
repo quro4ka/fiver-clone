@@ -6,7 +6,7 @@
     gap: 10px;
 }
 
-.input {
+.area {
     // display: inline-block;
     width: 100%;
     padding: 8px;
@@ -19,6 +19,12 @@
         border: 1px solid rgb(162, 189, 162);
     }
 }
+
+.input {
+    width: 100%;
+    background-color: antiquewhite;
+}
+
 
 .textarea {
     resize: none;

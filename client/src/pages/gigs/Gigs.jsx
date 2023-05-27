@@ -22,7 +22,7 @@ export const Gigs = () => {
 
   useEffect(() => {
     refetch()
-  }, [sort])
+  }, [sort, search])
 
   return (
     <section className={styles.wrapper}>

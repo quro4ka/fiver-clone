@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
 import { MessageCard } from '../../components/messageCard/MessageCard'
@@ -8,9 +8,9 @@ import { MessageForm } from '../../components/messageForm/MessageForm'
 import styles from './Message.module.scss'
 
 export const Message = () => {
-  const [message, setMessage] = useState('')
   const { id } = useParams()
 
+  const messageTextRef = useRef('')
   const queryClient = useQueryClient()
 
   const { isLoading, isError, data } = useQuery({
@@ -29,14 +29,14 @@ export const Message = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // console.log(message)
+    const message = document.querySelector('[data-area]')
     mutation.mutate({
       conversationId: id,
-      desc: message,
+      desc: messageTextRef?.current.textContent,
     })
-  }
 
-  // console.log(data)
+    message.textContent = ''
+  }
 
   return (
     <div className={styles.message}>
@@ -48,16 +48,11 @@ export const Message = () => {
           'error'
         ) : (
           <div className={styles.messages}>
-            <MessageCard />
-            <MessageCard />
-            <MessageCard />
-            <MessageCard />
-            <MessageCard />
-            <MessageCard />
+            {data.length !== 0 && data.map((message) => <MessageCard message={message} />)}
           </div>
         )}
         <div className={styles.form}>
-          <MessageForm submit={handleSubmit} setMessage={setMessage} />
+          <MessageForm submit={handleSubmit} messageTextRef={messageTextRef} />
         </div>
       </div>
     </div>

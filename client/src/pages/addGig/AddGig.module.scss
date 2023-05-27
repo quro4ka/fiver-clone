@@ -1,0 +1,32 @@
+input {
+    margin-bottom: 20px;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.card {
+    padding-top: 120px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.left, .right {
+    width: 50%;
+}
+
+
+@media screen and (max-width: 510px) {
+    .form {
+        flex-direction: column;
+        gap: 0;
+        .left, .right {
+            width: 100%;
+        }
+    }
+}

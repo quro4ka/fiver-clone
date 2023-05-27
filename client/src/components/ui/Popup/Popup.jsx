@@ -50,6 +50,12 @@ export const Popup = () => {
         </div>
         <p className={styles.item__text}>Profile</p>
       </Link>
+      <Link to="/mygigs" className={styles.item}>
+        <div className={styles.item__icon}>
+          <AiOutlineUser className={styles.userIcon} />
+        </div>
+        <p className={styles.item__text}>My gigs</p>
+      </Link>
       <Link to="/orders" className={styles.item}>
         <div className={styles.item__icon}>
           <AiOutlineUser className={styles.userIcon} />

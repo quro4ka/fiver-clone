@@ -53,9 +53,11 @@ export const getSingleConversation = async (req, res, next) => {
 }
 
 export const getConversations = async (req, res, next) => {
+  console.log('sel id', req.userId)
+  console.log('buyerId', req.buyerId)
   try {
     const conversations = await Conversation.find(
-      req.isSeller ? { sellerId: req.userId } : { buyerId: req.userId },
+      req.isSeller ? { buyerId: req.userId } : { sellerId: req.userId },
     )
 
     res.status(200).send(conversations)

@@ -58,16 +58,20 @@ export const getGigs = async (req, res, next) => {
     ...((query.min || query.max) && {
       price: { ...(query.min && { $gt: query.min }), ...(query.max && { $lt: query.max }) },
     }),
-    ...(query.seacrh && {
+    ...(query.search && {
       title: {
         $regex: query.search,
-        $option: 'i',
+        $options: 'i',
       },
     }),
   }
 
+  // console.log(filters)
+  // console.log(query.cat)
+
   try {
     const gigs = await Gig.find(filters).sort({ [query.sort]: -1 })
+    // console.log(gigs)
     res.status(200).send(gigs)
   } catch (err) {
     next(err)

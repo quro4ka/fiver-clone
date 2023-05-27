@@ -17,6 +17,8 @@ export const Messages = () => {
     queryFn: () => newRequest.get('/conversations').then((res) => res.data),
   })
 
+  console.log(data)
+
   const mutation = useMutation({
     mutationFn: (id) => {
       return newRequest.put(`/conversations/${id}`)

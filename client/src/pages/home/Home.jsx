@@ -56,7 +56,6 @@ export const Home = () => {
         slidesPerView={4}
         data={popularData}
       />
-      {/* <ThumbsCard /> */}
     </div>
   )
 }
