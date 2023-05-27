@@ -2,7 +2,7 @@
 
 Stack:
 
-Client:
+<h3>Client:</h3>
 
 1. React
 2. React Query
@@ -10,7 +10,7 @@ Client:
 4. Axios
 5. Swiper
 
-Api:
+<h3>Api:</h3>
 
 1. Express
 2. Mongoose
